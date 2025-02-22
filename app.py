@@ -24,9 +24,17 @@ def main():
             
         with st.spinner("Extracting data..."):
             crawler = WebCrawler()
-            loop = asyncio.ProactorEventLoop()
-            asyncio.set_event_loop(loop)
-            results = loop.run_until_complete(
+            # loop = asyncio.ProactorEventLoop()
+            # asyncio.set_event_loop(loop)
+            # results = loop.run_until_complete(
+            #     crawler.paginated_scrape(
+            #         start_url=url,
+            #         css_selector=css_selector,
+            #         data_points=data_points_list,
+            #         max_pages=max_pages
+            #     )
+            # )
+            results = asyncio.run(
                 crawler.paginated_scrape(
                     start_url=url,
                     css_selector=css_selector,
