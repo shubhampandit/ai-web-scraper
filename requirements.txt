@@ -1,0 +1,8 @@
+streamlit
+pandas
+crawl4ai
+google-generativeai
+groq
+python-dotenv
+aiohttp
+nest-asyncio
